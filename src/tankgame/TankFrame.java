@@ -1,7 +1,5 @@
 package tankgame;
 
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
 
 public class TankFrame extends JFrame {
@@ -15,6 +13,8 @@ public class TankFrame extends JFrame {
         mp=new MyPanel();
         this.add(mp);//把游戏绘图区加入
         this.setSize(1000,750);
+        //添加监听
+        this.addKeyListener(mp);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
